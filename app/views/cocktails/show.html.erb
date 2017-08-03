@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3 text-center well">
+        <h4>Cocktail:</h4>
+        <h5><%= @cocktail.name %></h5>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3 text-center well stuff">
+        <% @cocktail.doses.each do |dose| %>
+          <div class="stuff-items">
+            <h5>Doses:</h5>
+            <h6><%= dose.description %></h6>
+            <h6><%= link_to "Delete dose", dose_path(dose), method: :delete, data: { confirm: "Are you sure?"} %></h6>
+          </div>
+          <div class="stuff-items">
+            <h5>Ingredients:</h5>
+            <h6><%= dose.ingredient.name %></h6>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3 text-center well">
+        <%= link_to "Create new dose", new_cocktail_dose_path(@cocktail) %>
+      </div>
+    </div>
+  </div>
+</div>
