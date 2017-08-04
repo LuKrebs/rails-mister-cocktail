@@ -3,10 +3,10 @@
     <% @cocktails.each do |cocktail| %>
       <div class="col-xs-12 col-sm-4">
         <div class="card">
-          <div class="card-body" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/400x300/?nature,water);">
+          <div class="card-body" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path( cocktail.photo, width: 400, height: 300, crop: :fill) %>');">
             <%= image_tag 'https://source.unsplash.com/400x400/?buildings', class: 'card-user avatar avatar-large' %>
             <span class="card-category"><%= cocktail.name %></span>
-            <a href="#" style="cursor: pointer" class="card-link"></a>
+            <%= link_to "", cocktail_path(cocktail), class: 'card-link' %>
             <div class="card-description">
               <h2>Seb's drink</h2>
               <p>Amazing drink</p>
