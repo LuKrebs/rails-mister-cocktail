@@ -1,14 +1,31 @@
 <div class="container-fluid">
   <div class="container">
     <% @cocktails.each do |cocktail| %>
-      <div class="row">
-        <div class="col-sm-6 col-sm-offset-3 well">
-            <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card">
+          <div class="card-body" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/400x300/?nature,water);">
+            <%= image_tag 'https://source.unsplash.com/400x400/?buildings', class: 'card-user avatar avatar-large' %>
+            <span class="card-category"><%= cocktail.name %></span>
+            <a href="#" style="cursor: pointer" class="card-link"></a>
+            <div class="card-description">
+              <h2>Seb's drink</h2>
+              <p>Amazing drink</p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <p>Created at 13/01/19</p>
+            <div class="controls">
+              <a href="#"><i class="fa fa-star"></i></a>
+              <a href="#"><i class="fa fa-heart"></i></a>
+              <a href="#"><i class="fa fa-share"></i></a>
+            </div>
+          </div>
         </div>
       </div>
     <% end %>
   </div>
 </div>
+
 <div class="container-fluid">
   <div class="container">
     <div class="row">
