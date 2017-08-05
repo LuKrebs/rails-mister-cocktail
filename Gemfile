@@ -20,7 +20,7 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'therubyracer', platforms: :ruby
 
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2'
+gem 'coffee-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -36,10 +36,13 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'jquery-rails'
+
 # Photo stuff
 gem 'figaro'
 gem 'cloudinary'
 gem 'carrierwave', '~> 0.11.2'
+gem 'jquery-fileupload-rails'
+# gem 'attachinary', github: 'assembler/attachinary'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

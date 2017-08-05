@@ -4,7 +4,6 @@
       <div class="col-xs-12 col-sm-4">
         <div class="card">
           <div class="card-body" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path( cocktail.photo, width: 400, height: 300, crop: :fill) %>');">
-            <%= image_tag 'https://source.unsplash.com/400x400/?buildings', class: 'card-user avatar avatar-large' %>
             <span class="card-category"><%= cocktail.name %></span>
             <%= link_to "", cocktail_path(cocktail), class: 'card-link' %>
             <div class="card-description">
@@ -30,7 +29,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-6 col-sm-offset-3 text-center">
-          <h4><%= link_to "Create a new Cocktail", new_cocktail_path %></h4>
+          <h4><%= link_to "+ Add Cocktail", new_cocktail_path %></h4>
       </div>
     </div>
   </div>

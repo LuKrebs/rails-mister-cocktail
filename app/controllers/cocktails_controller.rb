@@ -6,11 +6,9 @@ class CocktailsController < ApplicationController
   end
 
   def show
-    # @doses = Dose.where(cocktail_id: @cocktail.id)
-    # @ingredients = []
-    # @doses.each do |dose|
-    #   @ingredients << Ingredient.find(dose.id)
-    # end
+  end
+
+  def update
   end
 
   def new
@@ -27,10 +25,16 @@ class CocktailsController < ApplicationController
     end
   end
 
+  def destroy
+    @cocktail.destroy
+
+    redirect_to cocktails_path
+  end
+
   private
 
   def cocktail_params
-    params.require(:cocktail).permit(:name, :photo)
+    params.require(:cocktail).permit(:name, :photo, :photo_cache)
   end
 
   def set_cocktail
